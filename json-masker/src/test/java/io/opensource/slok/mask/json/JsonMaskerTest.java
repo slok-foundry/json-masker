@@ -94,8 +94,8 @@ public class JsonMaskerTest {
     assertFalse(masked.contains("SecureP@ssw0rd!2025"), "Password should be masked");
     
     // API keys should be fully masked
-    assertFalse(masked.contains("sk_test_fake1234567890abcdefghijklmnop"), "API key should be masked");
-    assertFalse(masked.contains("whsec_test1234567890abcdefghijklmnopqr"), "API secret should be masked");
+    assertFalse(masked.contains("sk_test_fake1234567890abcdefghijklmnop"), " key should be masked");
+    assertFalse(masked.contains("whsec_test1234567890abcdefghijklmnopqr"), " secret should be masked");
     
     // Bank account should be masked
     assertFalse(masked.contains("9876543210"), "Bank account should be masked");
