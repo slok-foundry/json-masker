@@ -1,14 +1,14 @@
-package com.open.source.mask.json;
+package io.opensource.slok.mask.json;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.open.source.mask.json.matcher.ContainsFieldMatcher;
-import com.open.source.mask.json.matcher.FieldMatcher;
-import com.open.source.mask.json.matcher.RegexFieldMatcher;
-import com.open.source.mask.json.strategy.FullMaskStrategy;
-import com.open.source.mask.json.strategy.LengthBasedMaskStrategy;
-import com.open.source.mask.json.strategy.MaskingStrategy;
-import com.open.source.mask.json.strategy.MiddleMaskStrategy;
+import io.opensource.slok.mask.json.matcher.ContainsFieldMatcher;
+import io.opensource.slok.mask.json.matcher.FieldMatcher;
+import io.opensource.slok.mask.json.matcher.RegexFieldMatcher;
+import io.opensource.slok.mask.json.strategy.FullMaskStrategy;
+import io.opensource.slok.mask.json.strategy.LengthBasedMaskStrategy;
+import io.opensource.slok.mask.json.strategy.MaskingStrategy;
+import io.opensource.slok.mask.json.strategy.MiddleMaskStrategy;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

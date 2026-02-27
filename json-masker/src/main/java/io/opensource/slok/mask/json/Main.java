@@ -1,11 +1,11 @@
-package com.open.source.mask.json;
+package io.opensource.slok.mask.json;
 
 
-import com.open.source.mask.json.matcher.CompositeFieldMatcher;
-import com.open.source.mask.json.matcher.FieldMatcher;
-import com.open.source.mask.json.matcher.RegexFieldMatcher;
-import com.open.source.mask.json.strategy.FullMaskStrategy;
-import com.open.source.mask.json.strategy.MiddleMaskStrategy;
+import io.opensource.slok.mask.json.matcher.CompositeFieldMatcher;
+import io.opensource.slok.mask.json.matcher.FieldMatcher;
+import io.opensource.slok.mask.json.matcher.RegexFieldMatcher;
+import io.opensource.slok.mask.json.strategy.FullMaskStrategy;
+import io.opensource.slok.mask.json.strategy.MiddleMaskStrategy;
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.List;

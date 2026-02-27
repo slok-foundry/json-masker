@@ -75,8 +75,8 @@
         "answer": "Buddy"
       }
     ],
-    "apiKey": "sk_live_51HqJ8KLkjhg87HGjhg87HGjhg87HGjhg",
-    "apiSecret": "whsec_1234567890abcdefghijklmnopqrstuvwxyz"
+    "apiKey": "sk_test_fake1234567890abcdefghijklmnop",
+    "apiSecret": "whsec_test1234567890abcdefghijklmnopqr"
   },
   "preferences": {
     "language": "en-US",

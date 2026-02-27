@@ -1,4 +1,4 @@
-package com.open.source.mask.json.strategy;
+package io.opensource.slok.mask.json.strategy;
 
 import org.apache.commons.lang3.StringUtils;
 

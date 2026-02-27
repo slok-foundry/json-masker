@@ -1,7 +1,7 @@
-package com.open.source.mask.json;
+package io.opensource.slok.mask.json;
 
 
-import com.open.source.mask.json.strategy.MaskingStrategy;
+import io.opensource.slok.mask.json.strategy.MaskingStrategy;
 
 /**
  * FieldMaskingRule

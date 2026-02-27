@@ -1,8 +1,8 @@
-package com.open.source.mask.json;
+package io.opensource.slok.mask.json;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.open.source.mask.json.matcher.FieldMatcher;
+import io.opensource.slok.mask.json.matcher.FieldMatcher;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -94,8 +94,8 @@ public class JsonMaskerTest {
     assertFalse(masked.contains("SecureP@ssw0rd!2025"), "Password should be masked");
     
     // API keys should be fully masked
-    assertFalse(masked.contains("sk_live_51HqJ8KLkjhg87HGjhg87HGjhg87HGjhg"), "API key should be masked");
-    assertFalse(masked.contains("whsec_1234567890abcdefghijklmnopqrstuvwxyz"), "API secret should be masked");
+    assertFalse(masked.contains("sk_test_fake1234567890abcdefghijklmnop"), "API key should be masked");
+    assertFalse(masked.contains("whsec_test1234567890abcdefghijklmnopqr"), "API secret should be masked");
     
     // Bank account should be masked
     assertFalse(masked.contains("9876543210"), "Bank account should be masked");

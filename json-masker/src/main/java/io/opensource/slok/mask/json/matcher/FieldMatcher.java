@@ -1,4 +1,4 @@
-package com.open.source.mask.json.matcher;
+package io.opensource.slok.mask.json.matcher;
 
 /**
  * FieldMatcher

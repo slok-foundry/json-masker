@@ -1,4 +1,4 @@
-package com.open.source;
+package io.opensource.slok;
 
 /**
  * ${NAME}

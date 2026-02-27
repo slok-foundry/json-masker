@@ -8,7 +8,7 @@ A lightweight Java library for masking sensitive data in JSON payloads. Protect 
 - 🎯 **Flexible Field Matching**: Regex and contains-based field matchers
 - ⚙️ **Configuration-Driven**: JSON-based masking rules
 - 🚀 **High Performance**: Efficient recursive JSON traversal
-- 📦 **Zero Dependencies**: Only Jackson for JSON processing
+- 📦 **Minimal Dependencies**: Only Jackson for JSON processing
 
 ## Installation
 
@@ -16,7 +16,7 @@ A lightweight Java library for masking sensitive data in JSON payloads. Protect 
 
 ```xml
 <dependency>
-    <groupId>com.open.source</groupId>
+    <groupId>io.opensource.slok</groupId>
     <artifactId>json-masker</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 </dependency>
@@ -25,7 +25,7 @@ A lightweight Java library for masking sensitive data in JSON payloads. Protect 
 ### Gradle
 
 ```gradle
-implementation 'com.open.source:json-masker:0.1.0-SNAPSHOT'
+implementation 'io.opensource.slok:json-masker:0.1.0-SNAPSHOT'
 ```
 
 ## Quick Start
@@ -33,24 +33,24 @@ implementation 'com.open.source:json-masker:0.1.0-SNAPSHOT'
 ### Basic Usage
 
 ```java
-import com.open.source.mask.json.JsonMasker;
+import json.mask.io.opensource.slok.JsonMasker;
 
 JsonMasker masker = new JsonMasker();
 String jsonInput = "{\"email\":\"user@example.com\",\"ssn\":\"123-45-6789\"}";
 String configJson = """
-{
-  "rules": [
     {
-      "match": {"type": "contains", "value": "email"},
-      "strategy": {"type": "middle", "keepLeft": 2, "keepRight": 2, "maskChar": "*"}
-    },
-    {
-      "match": {"type": "contains", "value": "ssn"},
-      "strategy": {"type": "full", "maskChar": "*"}
+      "rules": [
+        {
+          "match": {"type": "contains", "value": "email"},
+          "strategy": {"type": "middle", "keepLeft": 2, "keepRight": 2, "maskChar": "*"}
+        },
+        {
+          "match": {"type": "contains", "value": "ssn"},
+          "strategy": {"type": "full", "maskChar": "*"}
+        }
+      ]
     }
-  ]
-}
-""";
+    """;
 
 String masked = masker.maskJson(jsonInput, configJson);
 // Output: {"email":"us***********om","ssn":"***********"}
