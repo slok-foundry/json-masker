@@ -1,0 +1,213 @@
+{
+  "patientId": "PAT-2025-123456",
+  "medicalRecordNumber": "MRN-987654321",
+  "patient": {
+    "firstName": "Sarah",
+    "middleName": "Elizabeth",
+    "lastName": "Johnson",
+    "dateOfBirth": "1978-11-25",
+    "ssn": "456-78-9012",
+    "gender": "Female",
+    "email": "sarah.johnson@email.com",
+    "phone": "+1-555-123-4567",
+    "mobilePhone": "+1-555-987-6543",
+    "address": {
+      "street": "456 Maple Drive",
+      "apartment": "Unit 12",
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02101",
+      "country": "USA"
+    }
+  },
+  "insurance": {
+    "primaryInsurance": {
+      "provider": "Blue Cross Blue Shield",
+      "policyNumber": "BCBS-123456789",
+      "groupNumber": "GRP-987654",
+      "subscriberId": "SUB-456789123",
+      "subscriberName": "Sarah Elizabeth Johnson",
+      "subscriberSSN": "456-78-9012",
+      "effectiveDate": "2024-01-01",
+      "expirationDate": "2025-12-31"
+    },
+    "secondaryInsurance": {
+      "provider": "Aetna",
+      "policyNumber": "AET-987654321",
+      "groupNumber": "GRP-123456",
+      "subscriberId": "SUB-789456123"
+    }
+  },
+  "medicalHistory": {
+    "conditions": [
+      {
+        "diagnosis": "Type 2 Diabetes Mellitus",
+        "icdCode": "E11.9",
+        "diagnosisDate": "2020-03-15",
+        "status": "Active"
+      },
+      {
+        "diagnosis": "Hypertension",
+        "icdCode": "I10",
+        "diagnosisDate": "2019-07-22",
+        "status": "Active"
+      },
+      {
+        "diagnosis": "Hyperlipidemia",
+        "icdCode": "E78.5",
+        "diagnosisDate": "2021-01-10",
+        "status": "Active"
+      }
+    ],
+    "allergies": [
+      {
+        "allergen": "Penicillin",
+        "reaction": "Anaphylaxis",
+        "severity": "Severe"
+      },
+      {
+        "allergen": "Sulfa drugs",
+        "reaction": "Rash",
+        "severity": "Moderate"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Metformin",
+        "dosage": "1000mg",
+        "frequency": "Twice daily",
+        "prescribedDate": "2020-03-15",
+        "prescribingPhysician": "Dr. Robert Williams",
+        "npi": "1234567890"
+      },
+      {
+        "name": "Lisinopril",
+        "dosage": "20mg",
+        "frequency": "Once daily",
+        "prescribedDate": "2019-07-22",
+        "prescribingPhysician": "Dr. Robert Williams",
+        "npi": "1234567890"
+      },
+      {
+        "name": "Atorvastatin",
+        "dosage": "40mg",
+        "frequency": "Once daily at bedtime",
+        "prescribedDate": "2021-01-10",
+        "prescribingPhysician": "Dr. Robert Williams",
+        "npi": "1234567890"
+      }
+    ]
+  },
+  "labResults": [
+    {
+      "testDate": "2025-01-05",
+      "testName": "Hemoglobin A1C",
+      "result": "7.2%",
+      "referenceRange": "4.0-5.6%",
+      "status": "Abnormal",
+      "orderedBy": "Dr. Robert Williams"
+    },
+    {
+      "testDate": "2025-01-05",
+      "testName": "Lipid Panel",
+      "results": {
+        "totalCholesterol": "220 mg/dL",
+        "ldl": "145 mg/dL",
+        "hdl": "42 mg/dL",
+        "triglycerides": "165 mg/dL"
+      },
+      "status": "Abnormal"
+    },
+    {
+      "testDate": "2025-01-05",
+      "testName": "Complete Blood Count",
+      "results": {
+        "wbc": "7.5 K/uL",
+        "rbc": "4.8 M/uL",
+        "hemoglobin": "14.2 g/dL",
+        "hematocrit": "42.5%",
+        "platelets": "250 K/uL"
+      },
+      "status": "Normal"
+    }
+  ],
+  "visits": [
+    {
+      "visitId": "VISIT-2025-001",
+      "visitDate": "2025-01-08",
+      "visitType": "Follow-up",
+      "provider": {
+        "name": "Dr. Robert Williams",
+        "npi": "1234567890",
+        "specialty": "Internal Medicine",
+        "phone": "+1-555-234-5678",
+        "email": "dr.williams@hospital.com"
+      },
+      "chiefComplaint": "Routine diabetes follow-up",
+      "vitalSigns": {
+        "bloodPressure": "138/88 mmHg",
+        "heartRate": "78 bpm",
+        "temperature": "98.6 F",
+        "weight": "185 lbs",
+        "height": "5'7\"",
+        "bmi": 29.0
+      },
+      "notes": "Patient reports good medication compliance. Blood sugar levels improving. Continue current medications.",
+      "diagnosis": ["E11.9", "I10", "E78.5"],
+      "prescriptions": [
+        {
+          "medication": "Metformin",
+          "dosage": "1000mg",
+          "quantity": 60,
+          "refills": 3,
+          "pharmacyName": "CVS Pharmacy",
+          "pharmacyPhone": "+1-555-345-6789"
+        }
+      ]
+    }
+  ],
+  "emergencyContact": {
+    "name": "David Johnson",
+    "relationship": "Spouse",
+    "phone": "+1-555-876-5432",
+    "alternatePhone": "+1-555-765-4321",
+    "email": "david.johnson@email.com",
+    "address": "456 Maple Drive, Unit 12, Boston, MA 02101"
+  },
+  "paymentInfo": {
+    "creditCard": {
+      "cardNumber": "5555555555554444",
+      "expiryDate": "09/2027",
+      "cvv": "789",
+      "cardholderName": "Sarah E Johnson",
+      "billingZip": "02101"
+    },
+    "bankAccount": {
+      "accountNumber": "9876543210123456",
+      "routingNumber": "011000015",
+      "accountType": "Checking",
+      "bankName": "Bank of America"
+    }
+  },
+  "consent": {
+    "hipaaAuthorization": true,
+    "authorizationDate": "2024-01-15",
+    "consentToTreat": true,
+    "consentDate": "2024-01-15",
+    "releaseOfInformation": [
+      {
+        "authorizedParty": "David Johnson",
+        "relationship": "Spouse",
+        "authorizationDate": "2024-01-15"
+      }
+    ]
+  },
+  "metadata": {
+    "createdAt": "2024-01-15T09:00:00Z",
+    "updatedAt": "2025-01-08T14:30:00Z",
+    "lastVisit": "2025-01-08",
+    "primaryPhysician": "Dr. Robert Williams",
+    "facility": "Boston General Hospital",
+    "facilityId": "FAC-001-2025"
+  }
+}

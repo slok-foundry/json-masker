@@ -1,0 +1,36 @@
+{
+  "rules": [
+    {
+      "match": { "type": "contains", "value": "email" },
+      "strategy": { "type": "middle", "maskChar": "*", "keepLeft": 2, "keepRight": 2 }
+    },
+    {
+      "match": { "type": "regex", "value": ".*pass.*" },
+      "strategy": { "type": "middle", "maskChar": "#", "keepLeft": 2, "keepRight": 3 }
+    },
+    {
+      "match": { "type": "regex", "value": ".*pan.*" },
+      "strategy": { "type": "full", "maskChar": "X" }
+    },
+    {
+      "match": { "type": "regex", "value": ".*authentication.*" },
+      "strategy": { "type": "full", "maskChar": "X" }
+    },
+    {
+      "match": { "type": "regex", "value": ".*ip.*" },
+      "strategy": { "type": "middle", "maskChar": "*", "keepLeft": 3, "keepRight": 3 }
+    },
+    {
+      "match": { "type": "regex", "value": ".*apikey.*" },
+      "strategy": { "type": "middle", "maskChar": "*", "keepLeft": 8, "keepRight": 8 }
+    },
+    {
+      "match": { "type": "regex", "value": ".*secret.*" },
+      "strategy": { "type": "middle", "maskChar": "*", "keepLeft": 4, "keepRight": 4 }
+    },
+    {
+      "match": { "type": "contains", "value": "kVersion" },
+      "strategy": { "type": "length", "maskChar": "#" }
+    }
+  ]
+}

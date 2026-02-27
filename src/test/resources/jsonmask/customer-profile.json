@@ -1,0 +1,121 @@
+{
+  "customerId": "CUST-2025-789456",
+  "personalInfo": {
+    "firstName": "Jennifer",
+    "lastName": "Anderson",
+    "email": "jennifer.anderson@email.com",
+    "phone": "+1-555-234-5678",
+    "dateOfBirth": "1985-03-15",
+    "ssn": "123-45-6789",
+    "nationalId": "A12345678",
+    "passport": "US987654321"
+  },
+  "address": {
+    "street": "742 Evergreen Terrace",
+    "city": "Springfield",
+    "state": "IL",
+    "zipCode": "62701",
+    "country": "USA"
+  },
+  "financialInfo": {
+    "bankAccount": {
+      "accountNumber": "9876543210",
+      "routingNumber": "021000021",
+      "iban": "GB82WEST12345698765432",
+      "swift": "DEUTDEFF"
+    },
+    "creditCards": [
+      {
+        "cardNumber": "4532015112830366",
+        "cvv": "123",
+        "expiryDate": "12/2027",
+        "cardholderName": "Jennifer Anderson",
+        "type": "Visa"
+      },
+      {
+        "cardNumber": "5425233430109903",
+        "cvv": "456",
+        "expiryDate": "08/2026",
+        "cardholderName": "Jennifer Anderson",
+        "type": "Mastercard"
+      }
+    ],
+    "salary": 125000,
+    "taxId": "98-7654321"
+  },
+  "employment": {
+    "company": "Tech Solutions Inc",
+    "position": "Senior Software Engineer",
+    "employeeId": "EMP-2019-4567",
+    "workEmail": "j.anderson@techsolutions.com",
+    "workPhone": "+1-555-987-6543"
+  },
+  "medicalInfo": {
+    "insuranceNumber": "INS-987654321",
+    "bloodType": "O+",
+    "allergies": ["Penicillin", "Peanuts"],
+    "medications": ["Lisinopril 10mg", "Metformin 500mg"],
+    "emergencyContact": {
+      "name": "Michael Anderson",
+      "relationship": "Spouse",
+      "phone": "+1-555-876-5432",
+      "email": "michael.anderson@email.com"
+    }
+  },
+  "authentication": {
+    "username": "janderson2025",
+    "password": "SecureP@ssw0rd!2025",
+    "securityQuestions": [
+      {
+        "question": "What is your mother's maiden name?",
+        "answer": "Thompson"
+      },
+      {
+        "question": "What was your first pet's name?",
+        "answer": "Buddy"
+      }
+    ],
+    "apiKey": "sk_test_fake1234567890abcdefghijklmnop",
+    "apiSecret": "whsec_test1234567890abcdefghijklmnopqr"
+  },
+  "preferences": {
+    "language": "en-US",
+    "timezone": "America/Chicago",
+    "currency": "USD",
+    "notifications": {
+      "email": true,
+      "sms": true,
+      "push": false
+    }
+  },
+  "activityLog": [
+    {
+      "timestamp": "2025-01-09T10:30:00Z",
+      "action": "LOGIN",
+      "ipAddress": "192.168.1.100",
+      "device": "Chrome/120.0 on Windows 10",
+      "location": "Springfield, IL"
+    },
+    {
+      "timestamp": "2025-01-09T11:15:00Z",
+      "action": "PAYMENT",
+      "amount": 299.99,
+      "cardLast4": "0366",
+      "ipAddress": "192.168.1.100"
+    },
+    {
+      "timestamp": "2025-01-09T14:45:00Z",
+      "action": "PROFILE_UPDATE",
+      "changes": ["email", "phone"],
+      "ipAddress": "192.168.1.100"
+    }
+  ],
+  "metadata": {
+    "createdAt": "2019-05-15T08:30:00Z",
+    "updatedAt": "2025-01-09T14:45:00Z",
+    "lastLogin": "2025-01-09T10:30:00Z",
+    "accountStatus": "ACTIVE",
+    "verificationStatus": "VERIFIED",
+    "riskScore": 15
+  }
+}

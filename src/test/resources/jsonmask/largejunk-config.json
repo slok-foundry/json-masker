@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "match": {
+        "type": "contains",
+        "value": "password"
+      },
+      "strategy": {
+        "type": "full",
+        "maskChar": "*"
+      }
+    },
+    {
+      "match": {
+        "type": "regex",
+        "value": ".*(card|number).*"
+      },
+      "strategy": {
+        "type": "middle",
+        "keepLeft": 4,
+        "keepRight": 4,
+        "maskChar": "*"
+      }
+    },
+    {
+      "match": {
+        "type": "contains",
+        "value": "cvv"
+      },
+      "strategy": {
+        "type": "full",
+        "maskChar": "*"
+      }
+    },
+    {
+      "match": {
+        "type": "contains",
+        "value": "email"
+      },
+      "strategy": {
+        "type": "middle",
+        "keepLeft": 2,
+        "keepRight": 2,
+        "maskChar": "*"
+      }
+    }
+  ]
+}
