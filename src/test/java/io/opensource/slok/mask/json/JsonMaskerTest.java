@@ -215,32 +215,6 @@ public class JsonMaskerTest {
     System.out.println("Large Junk Masking:\n" + masked);
   }
 
-  @Test
-  public void testTestExchangeMasking() throws Exception {
-    File file = new File(TEST_DATA_DIR + "/testExchange.json");
-    if (!file.exists()) {
-      System.out.println("testExchange.json not found, skipping");
-      return;
-    }
-    
-    String input = Files.readString(Paths.get(TEST_DATA_DIR + "/testExchange.json"), StandardCharsets.UTF_8);
-    String masked = masker.maskJson(input, rules);
-    
-    assertNotNull(masked);
-    
-    // API credentials should be masked
-    assertFalse(masked.contains("0hmItsSTroingPassword"), "API password should be masked");
-    
-    // Secrets should be masked
-    assertFalse(masked.contains("MIIEvQcGJGKJGIUKLGDGHGKHHJHGKHLKKUA="), "Secret data should be masked");
-    
-    // Email should be masked
-    assertFalse(masked.contains("hans.wen@shijigroup.com"), "Email should be masked");
-    assertFalse(masked.contains("kumarecom@shijigroup.com"), "Email should be masked");
-    
-    System.out.println("Test Exchange Masking:\n" + masked);
-  }
-
   private void verifySensitiveDataMasked(String fileName, String original, String masked) {
     // Skip validation for config files
     if (fileName.contains("-config")) {

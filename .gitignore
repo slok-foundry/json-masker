@@ -25,7 +25,7 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .mvn/settings.xml
-
+.private/process-to-upload-to-central-maven.md
 
 # IntelliJ IDEA
 .idea/
