@@ -1,0 +1,136 @@
+{
+  "transactionId": "TXN-2025-0109-987654",
+  "merchantReference": "ORD-2025-456789",
+  "pspReference": "8815581400ce5422081",
+  "amount": {
+    "value": 15999,
+    "currency": "USD"
+  },
+  "paymentMethod": {
+    "type": "scheme",
+    "brand": "visa",
+    "cardNumber": "4111111111111111",
+    "expiryMonth": "03",
+    "expiryYear": "2030",
+    "holderName": "John Michael Smith",
+    "cvc": "737",
+    "issuerCountry": "US",
+    "fundingSource": "credit"
+  },
+  "billingAddress": {
+    "street": "1234 Main Street",
+    "houseNumberOrName": "Apt 5B",
+    "city": "New York",
+    "stateOrProvince": "NY",
+    "postalCode": "10001",
+    "country": "US"
+  },
+  "shippingAddress": {
+    "street": "5678 Oak Avenue",
+    "houseNumberOrName": "Suite 200",
+    "city": "Los Angeles",
+    "stateOrProvince": "CA",
+    "postalCode": "90001",
+    "country": "US"
+  },
+  "shopper": {
+    "email": "john.smith@example.com",
+    "firstName": "John",
+    "lastName": "Smith",
+    "telephoneNumber": "+1-212-555-0123",
+    "dateOfBirth": "1990-07-22",
+    "nationality": "US",
+    "shopperIP": "203.0.113.42",
+    "shopperReference": "SHOP-2025-123456",
+    "socialSecurityNumber": "987-65-4321"
+  },
+  "browserInfo": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "acceptHeader": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "language": "en-US",
+    "colorDepth": 24,
+    "screenHeight": 1080,
+    "screenWidth": 1920,
+    "timeZoneOffset": -300,
+    "javaEnabled": false
+  },
+  "merchantAccount": {
+    "merchantId": "MERCH-001-2025",
+    "merchantName": "Premium Electronics Store",
+    "mcc": "5732",
+    "apiKey": "AQEyhmfxKYvLbRZNw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZjjU5QwzwVRbHyQH8h8+jWN8=",
+    "apiSecret": "DFB1EB5485895CFA42E9F3D3E4F5A6B7C8D9E0F1A2B3C4D5E6F7A8B9C0D1E2F3",
+    "webhookUsername": "webhook_user_2025",
+    "webhookPassword": "wh_p@ssw0rd_secure_2025!"
+  },
+  "authentication": {
+    "threeDSVersion": "2.2.0",
+    "eci": "05",
+    "cavv": "AAABCSIlAgAAAABZYwAAAAAAAAA=",
+    "xid": "MDAwMDAwMDAwMDAwMDAwMzIyNzY=",
+    "dsTransID": "c5b808e7-1de1-4069-a17b-f70d3b3b1645",
+    "acsTransID": "8f4e8e8e-1de1-4069-a17b-f70d3b3b1645",
+    "authenticationValue": "MTIzNDU2Nzg5MDEyMzQ1Njc4OTA="
+  },
+  "riskData": {
+    "clientData": "eyJ2ZXJzaW9uIjoiMS4wLjAiLCJkZXZpY2VGaW5nZXJwcmludCI6ImRmcDEyMzQ1Njc4OTAifQ==",
+    "fraudScore": 23,
+    "ipAddress": "203.0.113.42",
+    "deviceFingerprint": "dfp1234567890abcdef",
+    "emailRiskScore": 12,
+    "phoneRiskScore": 8
+  },
+  "additionalData": {
+    "customerEmail": "john.smith@example.com",
+    "customerPhone": "+1-212-555-0123",
+    "loyaltyNumber": "LOYAL-987654321",
+    "employeeId": "EMP-2025-5678",
+    "driverLicense": "NY-12345678",
+    "passportNumber": "US123456789",
+    "taxIdentificationNumber": "12-3456789",
+    "healthInsuranceNumber": "HIN-987654321",
+    "bankAccountNumber": "1234567890123456",
+    "routingNumber": "021000021",
+    "iban": "US12BANK0000001234567890",
+    "bitcoinAddress": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+  },
+  "metadata": {
+    "orderId": "ORD-2025-456789",
+    "orderDate": "2025-01-09T15:30:00Z",
+    "customerId": "CUST-2025-789456",
+    "sessionId": "sess_1234567890abcdef",
+    "affiliateId": "AFF-2025-1234",
+    "campaignId": "CAMP-WINTER-2025",
+    "referralCode": "REF-FRIEND-2025"
+  },
+  "lineItems": [
+    {
+      "id": "ITEM-001",
+      "description": "Premium Laptop Computer",
+      "quantity": 1,
+      "amountIncludingTax": 12999,
+      "taxAmount": 1040,
+      "taxPercentage": 8.0
+    },
+    {
+      "id": "ITEM-002",
+      "description": "Wireless Mouse",
+      "quantity": 2,
+      "amountIncludingTax": 3000,
+      "taxAmount": 240,
+      "taxPercentage": 8.0
+    }
+  ],
+  "webhooks": [
+    {
+      "url": "https://merchant.example.com/webhook/payment",
+      "username": "webhook_merchant",
+      "password": "wh_m3rch@nt_p@ss!",
+      "hmacKey": "hmac_key_1234567890abcdefghijklmnopqrstuvwxyz"
+    }
+  ],
+  "status": "Authorised",
+  "resultCode": "Authorised",
+  "pspReference": "8815581400ce5422081",
+  "merchantReference": "ORD-2025-456789"
+}
