@@ -91,8 +91,31 @@ Dynamically adjusts masking based on value length.
   "strategy": {"type": "length", "maskChar": "X"}
 }
 ```
+
+**Masking Rules by Length:**
+
+| Length Range | Behavior | Example Input | Example Output |
+|--------------|----------|---------------|----------------|
+| > 15 chars   | Keep 5 at start, 5 at end | `"1234567890123456"` | `"12345X6789"` |
+| 9-15 chars   | Keep 3 at start, 3 at end | `"123456789"` | `"123X789"` |
+| 5-8 chars    | Keep 3 at start only | `"12345"` | `"123X"` |
+| ≤ 4 chars    | Fully mask | `"1234"` | `"X"` |
+
 **Input**: `"address": "123 Main Street"`  
 **Output**: `"address": "123XX"`
+
+### Custom Masking Strategy
+Implement MaskingStrategy interface for custom masking logic.
+
+```java
+public class CustomMaskStrategy implements MaskingStrategy {
+  @Override
+  public String mask(String plain, String maskChar) {
+    // Your custom masking logic
+    return plain.replaceAll("[a-zA-Z]", maskChar);
+  }
+}
+```
 
 ## Field Matchers
 
@@ -195,6 +218,69 @@ mvn test
 - Java 17 or higher
 - Maven 3.6+
 
+## Extensibility
+
+### Adding Custom Strategies
+
+The library uses resource files to map strategy names to implementations. To add a custom strategy:
+
+1. Implement the `MaskingStrategy` interface:
+```java
+public class EmailMaskStrategy implements MaskingStrategy {
+  @Override
+  public String mask(String plain, String maskChar) {
+    // Custom logic
+    return plain.replaceAll("@.*", "@***");
+  }
+}
+```
+
+2. Add mapping to `src/main/resources/masking-strategies.properties`:
+```properties
+email=com.example.EmailMaskStrategy
+```
+
+3. Use in configuration:
+```json
+{
+  "match": {"type": "contains", "value": "email"},
+  "strategy": {"type": "email", "maskChar": "*"}
+}
+```
+
+### Adding Custom Matchers
+
+Similarly, custom field matchers can be added:
+
+1. Implement the `FieldMatcher` interface:
+```java
+public class ExactFieldMatcher implements FieldMatcher {
+  private final String fieldName;
+  
+  public ExactFieldMatcher(String fieldName) {
+    this.fieldName = fieldName;
+  }
+  
+  @Override
+  public boolean matches(String field) {
+    return fieldName.equals(field);
+  }
+}
+```
+
+2. Add mapping to `src/main/resources/field-matchers.properties`:
+```properties
+exact=com.example.ExactFieldMatcher
+```
+
+3. Use in configuration:
+```json
+{
+  "match": {"type": "exact", "value": "password"},
+  "strategy": {"type": "full", "maskChar": "*"}
+}
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -206,5 +292,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 For issues and questions, please open an issue on GitHub.
-
-
